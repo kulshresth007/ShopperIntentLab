@@ -294,17 +294,13 @@ All values below were calculated on the same held-out test set.
 
 ## 9. Model Observations and Trade-offs
 
-The test results demonstrate that different models prioritise different aspects of classification.
-
-- Logistic Regression achieved good recall and a strong ROC-AUC.
-- Decision Tree achieved the highest recall, identifying the largest proportion of actual purchasing sessions among the five models.
-- KNN achieved the highest accuracy and precision, but its lower recall indicates that it missed a comparatively larger proportion of actual purchasing sessions.
-- Gaussian Naive Bayes had the lowest overall performance among the five tested models.
-- SVM achieved the highest F1-score and MCC, together with the highest ROC-AUC.
-
-The SVM and Decision Tree ROC-AUC values were extremely close: 0.9235 and 0.9234 respectively. This difference should not be interpreted as a meaningful performance gap by itself.
-
-The results show why model selection should depend on the objective rather than accuracy alone.
+ML Model Name	Observation about model performance
+Logistic Regression	Strong AUC (0.9226) and recall (0.8298). It detects a large proportion of purchasing sessions, although precision (0.5494) indicates a notable number of false positives.
+Decision Tree	Highest recall (0.8743), identifying 334 of 382 actual purchases. It produces more false positives (376), but has a very strong AUC of 0.9234.
+KNN	Highest accuracy (0.8939) and precision (0.7016), but lowest recall (0.5602). It misses 168 actual purchasing sessions.
+Gaussian Naive Bayes	Lowest accuracy (0.8247), AUC (0.8737), precision (0.4645), F1 (0.5845) and MCC (0.5097).
+Support Vector Machine (SVM)	Highest AUC (0.9235), F1 (0.6688) and MCC (0.6077), offering the strongest overall balance.
+Overall Winner: SVM	Best overall balance based on F1 and MCC. Decision Tree has an almost identical AUC and the highest recall.
 
 ## 10. Overall Model Selection
 
@@ -370,7 +366,7 @@ ShopperIntentLab/
 https://github.com/kulshresth007/ShopperIntentLab
 
 **Streamlit Community Cloud:**  
-To be added after deployment.
+https://shopperintentlab.streamlit.app/
 
 ## 15. Conclusion
 
