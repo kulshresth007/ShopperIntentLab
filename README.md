@@ -294,13 +294,14 @@ All values below were calculated on the same held-out test set.
 
 ## 9. Model Observations and Trade-offs
 
-ML Model Name	Observation about model performance
-Logistic Regression	Strong AUC (0.9226) and recall (0.8298). It detects a large proportion of purchasing sessions, although precision (0.5494) indicates a notable number of false positives.
-Decision Tree	Highest recall (0.8743), identifying 334 of 382 actual purchases. It produces more false positives (376), but has a very strong AUC of 0.9234.
-KNN	Highest accuracy (0.8939) and precision (0.7016), but lowest recall (0.5602). It misses 168 actual purchasing sessions.
-Gaussian Naive Bayes	Lowest accuracy (0.8247), AUC (0.8737), precision (0.4645), F1 (0.5845) and MCC (0.5097).
-Support Vector Machine (SVM)	Highest AUC (0.9235), F1 (0.6688) and MCC (0.6077), offering the strongest overall balance.
-Overall Winner: SVM	Best overall balance based on F1 and MCC. Decision Tree has an almost identical AUC and the highest recall.
+| ML Model Name | Observation about model performance |
+|---|---|
+| Logistic Regression | Achieved a strong AUC of 0.9226 and recall of 0.8298. It identifies a large proportion of purchasing sessions, although its precision of 0.5494 indicates that some non-purchasing sessions are incorrectly classified as purchases. |
+| Decision Tree | Achieved the highest recall of 0.8743, identifying the largest proportion of actual purchasing sessions. However, its precision of 0.4704 is relatively low, indicating more false-positive predictions. |
+| KNN | Achieved the highest accuracy of 0.8939 and precision of 0.7016. However, its recall of 0.5602 is the lowest among the five models, meaning it misses a comparatively large number of actual purchases. |
+| Gaussian Naive Bayes | Recorded the lowest accuracy (0.8247), AUC (0.8737), F1-score (0.5845) and MCC (0.5097) among the five models. Its overall performance was weaker than the other classifiers on this dataset. |
+| Support Vector Machine (SVM) | Achieved the highest AUC (0.9235), F1-score (0.6688) and MCC (0.6077). It provides the strongest overall balance between precision and recall among the evaluated models. |
+| **Overall Winner: SVM** | SVM is the overall winner based on its F1-score and MCC, along with the highest AUC. However, Decision Tree achieved an almost identical AUC of 0.9234 and the highest recall. |
 
 ## 10. Overall Model Selection
 
